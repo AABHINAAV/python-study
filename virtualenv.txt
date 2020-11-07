@@ -1,0 +1,39 @@
+// to install the virtual environment module in system-----
+pip3 install virtualenv
+
+// now create a folder anywhere u want-----
+mkdir virtualpython
+
+// move to tha folder using cd command in terminal
+cd home/abbhinav/Desktop/virtualpython
+
+// now use 'virtualenv environment_name' to create virtual environment of python-----
+virtualenv abhi
+
+// now it has installed all basic and predefined modules in that newly created python environment
+// if we want some extra module in it then we can install them using 
+pip3 install module_name
+
+//////but if we want to create such environment that has all packages of outer most environment
+virtualenv --system-site-packages environment_name
+
+//if we want list of modules(requirements) of that virtual environment
+'pip freeze > filename.txt'
+pip freeze > requirements.txt
+it will create text file with names and version of extra installed modules
+use above command again to update file
+
+//to activate v-environment
+source ./abhi/bin/activate   ---> linux / mac
+./abhi/Scripts/activate   ---> windows
+
+//now we are inside python virtual environment
+'python' ---> to access the newly created python
+
+//if a file has thousands of module then to install them one by one is pain in ass so we use
+'pip3 install -r filename.txt'
+pip3 install -r requirements.txt
+it will install all required modules of that virtual environment
+
+//to get out of virtual environment
+deactivate
